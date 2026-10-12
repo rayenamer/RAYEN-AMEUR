@@ -21,4 +21,8 @@ export function SlideHeader({ num, kicker, title, titlePh }) {
   );
 }
 
+// Préfixe les fichiers de /public avec la base du site (GitHub Pages)
+export const asset = (path) =>
+  !path || /^(https?:)?\/\//.test(path) ? path : import.meta.env.BASE_URL + path.replace(/^\//, "");
+
 export const pad = (n) => String(n).padStart(2, "0");

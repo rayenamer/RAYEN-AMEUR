@@ -227,7 +227,65 @@ body {
 }
 .chip.ph { background: transparent; color: var(--navy); border: 1.5px dashed var(--navy); }
 
-/* ---------- Diapo 3 : statut ---------- */
+/* ---------- Diapo 3 : certificats ---------- */
+.certif-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+.certif-card {
+  padding: 30px 26px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid rgba(30, 58, 95, 0.12);
+  box-shadow: 0 14px 34px rgba(30, 58, 95, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 470px;
+}
+.certif-logo {
+  height: 120px;
+  margin-bottom: 22px;
+  display: grid;
+  place-items: center;
+  border-bottom: 1px solid rgba(30, 58, 95, 0.12);
+  padding-bottom: 22px;
+}
+.certif-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.certif-logo-ph {
+  width: 96px;
+  height: 96px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(30, 58, 95, 0.25);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+.certif-nom { font-family: var(--serif); font-size: 25px; font-weight: 600; line-height: 1.2; }
+.certif-org { font-size: 18px; opacity: 0.8; }
+.certif-date { font-size: 15px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.55; }
+.certif-org.ph, .certif-date.ph { opacity: 0.32; }
+.certif-link {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--navy);
+  color: var(--cream);
+  transition: background 0.2s;
+}
+a.certif-link:hover { background: var(--navy-deep); }
+.certif-link.ph { background: transparent; color: var(--navy); border: 1.5px dashed var(--navy); }
+
+/* ---------- Diapo 4 : statut ---------- */
 .statut { flex-direction: row; align-items: center; gap: 100px; }
 .statut-left { flex: 1.2; }
 .statut-eyebrow {

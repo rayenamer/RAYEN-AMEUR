@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { profil } from "../content";
-import { Field } from "./common";
+import { Field, asset } from "./common";
 
 function Photo({ src, index }) {
   const [error, setError] = useState(!src);
@@ -9,7 +9,7 @@ function Photo({ src, index }) {
       {error ? (
         <div className="photo-ph">{String(index + 1).padStart(2, "0")}</div>
       ) : (
-        <img src={src} alt="" onError={() => setError(true)} />
+        <img src={asset(src)} alt="" onError={() => setError(true)} />
       )}
     </figure>
   );

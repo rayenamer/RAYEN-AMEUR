@@ -11,11 +11,11 @@ export const profil = {
   titre: "", // ex : « Développeur Full-Stack en alternance »
   // Déposez vos 5 photos dans /public/photos/ avec ces noms
   photos: [
-    "/photos/photo1.jpg",
-    "/photos/photo2.jpg",
-    "/photos/photo3.jpg",
-    "/photos/photo4.jpg",
-    "/photos/photo5.jpg",
+    "photos/photo1.jpg",
+    "photos/photo2.jpg",
+    "photos/photo3.jpg",
+    "photos/photo4.jpg",
+    "photos/photo5.jpg",
   ],
 };
 
@@ -40,7 +40,17 @@ export const parcours = {
   langues: ["", "", ""],
 };
 
-// ---------- Diapo 3 : aujourd'hui (étudiant, double diplôme) ----------
+// ---------- Diapo 3 : certificats professionnels ----------
+// Déposez les logos dans /public/certificats/ avec ces noms
+export const certificats = [
+  { nom: "", organisme: "", date: "", logo: "certificats/logo1.png", lien: "" },
+  { nom: "", organisme: "", date: "", logo: "certificats/logo2.png", lien: "" },
+  { nom: "", organisme: "", date: "", logo: "certificats/logo3.png", lien: "" },
+  { nom: "", organisme: "", date: "", logo: "certificats/logo4.png", lien: "" },
+  { nom: "", organisme: "", date: "", logo: "certificats/logo5.png", lien: "" },
+];
+
+// ---------- Diapo 4 : aujourd'hui (étudiant, double diplôme) ----------
 export const statut = {
   accroche: "", // ex : « Étudiant admis en double diplôme »
   description: "",

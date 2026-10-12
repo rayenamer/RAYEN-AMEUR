@@ -34,7 +34,7 @@ export default function Statut() {
     <div className="slide-inner statut">
       <div className="statut-left">
         <div className="kicker">
-          <span className="kicker-num">03</span>
+          <span className="kicker-num">04</span>
           <span className="kicker-line" />
           <span>Aujourd'hui</span>
         </div>

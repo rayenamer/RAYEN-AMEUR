@@ -3,6 +3,7 @@ import { experiences } from "./content";
 import Cover from "./slides/Cover";
 import Parcours from "./slides/Parcours";
 import Statut from "./slides/Statut";
+import Certificats from "./slides/Certificats";
 import Experience from "./slides/Experience";
 import Compatibilite from "./slides/Compatibilite";
 import { pad } from "./slides/common";
@@ -13,14 +14,15 @@ const STAGE_H = 900;
 const slides = [
   { key: "cover", dark: true, render: () => <Cover /> },
   { key: "parcours", render: () => <Parcours /> },
+  { key: "certificats", render: () => <Certificats /> },
   { key: "statut", dark: true, render: () => <Statut /> },
   ...experiences.map((exp, i) => ({
     key: `exp-${i}`,
     render: () => (
-      <Experience exp={exp} index={i} total={experiences.length} slideNum={4 + i} />
+      <Experience exp={exp} index={i} total={experiences.length} slideNum={5 + i} />
     ),
   })),
-  { key: "compat", dark: true, render: () => <Compatibilite slideNum={4 + experiences.length} /> },
+  { key: "compat", dark: true, render: () => <Compatibilite slideNum={5 + experiences.length} /> },
 ];
 
 const fromHash = () => {
