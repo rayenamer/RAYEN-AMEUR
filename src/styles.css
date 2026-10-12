@@ -248,12 +248,14 @@ body {
 .certif-logo {
   height: 120px;
   margin-bottom: 22px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-bottom: 1px solid rgba(30, 58, 95, 0.12);
   padding-bottom: 22px;
 }
-.certif-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+/* Taille fixe : contient le logo quel que soit son format (carré, large…) */
+.certif-logo img { width: 100%; height: 100%; object-fit: contain; }
 .certif-logo-ph {
   width: 96px;
   height: 96px;
@@ -374,38 +376,86 @@ a.certif-link:hover { background: var(--navy-deep); }
 .tech-detail { font-size: 16px; line-height: 1.4; opacity: 0.8; }
 .tech .ph { opacity: 0.45; }
 
-/* ---------- Dernière diapo : compatibilité ---------- */
-.compat-intro { margin-top: 24px; font-size: 23px; line-height: 1.55; max-width: 1150px; opacity: 0.85; }
+/* ---------- Diapo compatibilité ---------- */
+.slide-inner.compat { padding: 64px 120px 100px; }
+.compat .slide-title { font-size: 56px; margin-top: 14px; }
+.compat-intro { margin-top: 16px; font-size: 19px; line-height: 1.5; max-width: 1360px; opacity: 0.85; }
 .compat-intro.ph { opacity: 0.38; }
 .compat-grid {
-  margin-top: 46px;
+  margin-top: 26px;
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
   gap: 28px;
-  flex: 1;
-  align-content: start;
+}
+.compat-axe { display: flex; flex-direction: column; gap: 14px; }
+.compat-axe-title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.65;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(245, 243, 238, 0.25);
 }
 .compat-card {
-  padding: 34px 32px;
-  border-radius: 16px;
+  flex: 1;
+  padding: 18px 22px;
+  border-radius: 14px;
   background: rgba(245, 243, 238, 0.06);
-  border: 1px solid rgba(245, 243, 238, 0.22);
+  border: 1px solid rgba(245, 243, 238, 0.2);
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 8px;
 }
-.compat-num { font-family: var(--serif); font-size: 44px; font-weight: 600; opacity: 0.4; }
-.compat-card h3 { font-family: var(--serif); font-size: 29px; font-weight: 600; }
-.compat-card p { font-size: 19px; line-height: 1.5; opacity: 0.85; }
+.compat-card-top { display: flex; align-items: baseline; gap: 12px; }
+.compat-num { font-family: var(--serif); font-size: 20px; font-weight: 600; opacity: 0.45; }
+.compat-card h4 { font-family: var(--serif); font-size: 22px; font-weight: 600; line-height: 1.2; }
+.compat-card p { font-size: 16px; line-height: 1.45; opacity: 0.85; }
+.compat-preuve {
+  margin-top: auto;
+  padding-top: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+.compat-preuve::before { content: "✓ "; }
 .compat-card .ph { opacity: 0.38; }
 .compat-conclusion {
-  margin-top: 32px;
+  margin-top: auto;
+  padding-top: 24px;
   font-family: var(--serif);
-  font-size: 30px;
+  font-size: 24px;
   font-style: italic;
   text-align: center;
 }
+
+/* ---------- Dernière diapo : prototypes ---------- */
+.proto-list {
+  margin: auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.proto-card {
+  min-height: 320px;
+  padding: 36px 32px;
+  border-radius: 18px;
+  border: 1.5px solid currentColor;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+a.proto-card:hover { background: var(--navy); color: var(--cream); }
+.proto-num { font-family: var(--serif); font-size: 28px; font-weight: 600; opacity: 0.45; }
+.proto-card h3 { font-family: var(--serif); font-size: 32px; font-weight: 600; line-height: 1.15; }
+.proto-link { margin-top: auto; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.proto-link.ph { text-transform: none; letter-spacing: 0; }
 
 /* ---------- Contrôles ---------- */
 .controls {

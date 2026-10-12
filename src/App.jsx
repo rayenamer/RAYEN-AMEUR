@@ -6,6 +6,7 @@ import Statut from "./slides/Statut";
 import Certificats from "./slides/Certificats";
 import Experience from "./slides/Experience";
 import Compatibilite from "./slides/Compatibilite";
+import Prototypes from "./slides/Prototypes";
 import { pad } from "./slides/common";
 
 const STAGE_W = 1600;
@@ -23,6 +24,7 @@ const slides = [
     ),
   })),
   { key: "compat", dark: true, render: () => <Compatibilite slideNum={5 + experiences.length} /> },
+  { key: "prototypes", render: () => <Prototypes slideNum={6 + experiences.length} /> },
 ];
 
 const fromHash = () => {
