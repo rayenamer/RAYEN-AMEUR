@@ -227,7 +227,7 @@ export const compatibilite = {
 // « lien »      : (optionnel) URL du prototype en ligne
 // Tout champ laissé vide ("") s'affiche comme repère dans la fenêtre.
 export const prototypes = [
-  { titre: "Maintenance prédictive", diagramme: "public/photos/architecture-predmaint.png", video: "", lien: "" },
-  { titre: "Assistant pour les techniciens", diagramme: "public/photos/assiTech.png", video: "", lien: "" },
-  { titre: "Traitement de documents", diagramme: "public/photos/traiteDoc.png", video: "", lien: "" },
+  { titre: "Maintenance prédictive", diagramme: "photos/architecture-predmaint.png", video: "", lien: "" },
+  { titre: "Assistant pour les techniciens", diagramme: "photos/assiTech.png", video: "", lien: "" },
+  { titre: "Traitement de documents", diagramme: "photos/traiteDoc.png", video: "", lien: "" },
 ];
