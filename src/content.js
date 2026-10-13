@@ -220,10 +220,14 @@ export const compatibilite = {
     "Ces cas d’usage correspondent directement à des projets que j’ai déjà menés. Je serais ravi d’en discuter avec vous et de contribuer à intégrer l’IA dans vos lignes et vos services.",
 };
 
-// ---------- Diapo suivante : prototypes (liens uniquement) ----------
-// « lien » : collez l'URL du prototype ; laissé vide ("") il s'affiche comme repère.
+// ---------- Dernière diapo : prototypes (cliquables → fenêtre détaillée) ----------
+// « diagramme » : image de l'architecture (SVG ou PNG), ex. "prototypes/maintenance.svg"
+//                 → déposez le fichier dans /public/prototypes/
+// « video »     : fichier local ("prototypes/maintenance.mp4") ou lien YouTube / Vimeo / Google Drive
+// « lien »      : (optionnel) URL du prototype en ligne
+// Tout champ laissé vide ("") s'affiche comme repère dans la fenêtre.
 export const prototypes = [
-  { titre: "Maintenance prédictive", lien: "" },
-  { titre: "Assistant pour les techniciens", lien: "" },
-  { titre: "Traitement de documents", lien: "" },
+  { titre: "Maintenance prédictive", diagramme: "public/photos/architecture-predmaint.png", video: "", lien: "" },
+  { titre: "Assistant pour les techniciens", diagramme: "public/photos/assiTech.png", video: "", lien: "" },
+  { titre: "Traitement de documents", diagramme: "public/photos/traiteDoc.png", video: "", lien: "" },
 ];
